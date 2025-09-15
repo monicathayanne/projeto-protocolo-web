@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Protocolo de Entrega Mensal</title>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div style="text-align: center;">
+    <h1>PROTOCOLO DE ENTREGA MENSAL - CONTEC</h1>
+  </div>
+
+  <div>
+    <label>Competência:</label>
+    <input type="text" id="competencia" placeholder="MM/AAAA">
+  </div>
+  <div>
+    <label>Setor:</label>
+    <input type="text" id="data-entrega" placeholder="">
+  </div>
+
+  <div>
+    <label>Tipo de Protocolo:</label>
+    <select id="tipo-protocolo">
+      <option value="fiscal-serra">Fiscal - Serra</option>
+      <option value="fiscal-baturite">Fiscal - Baturité</option>
+      <option value="pessoal-serra">Pessoal - Serra</option>
+      <option value="pessoal-baturite">Pessoal - Baturité</option>
+    </select>
+  </div>
+
+  <button id="add-btn">+ Adicionar Protocolo</button>
+  <button id="exportar-btn">Exportar HTML</button>
+  <button id="exportar-pdf-btn">Exportar PDF</button>
+  <button id="limpar-btn">Limpar Dados</button>
+  <button id="exportar-json-btn">Exportar Dados (JSON)</button>
+  <button id="importar-json-btn">Importar Dados (JSON)</button>
+  <input type="file" id="file-input" accept=".json" style="display: none;">
+  <div id="container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
