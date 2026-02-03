@@ -19,7 +19,7 @@ function salvarDados() {
 
   localStorage.setItem(`protocolos_${chave}`, JSON.stringify(protocolos));
   localStorage.setItem(`competencia_${chave}`, document.getElementById("competencia").value);
-  localStorage.setItem(`dataEntrega_${chave}`, document.getElementById("data-entrega").value);
+  //localStorage.setItem(`dataEntrega_${chave}`, document.getElementById("data-entrega").value);
 }
 
 // NOVA FUNÇÃO: Atualiza todos os cartões quando muda lá em cima
@@ -40,7 +40,7 @@ function carregarDados() {
   const protocolos = JSON.parse(localStorage.getItem(`protocolos_${chave}`) || "[]");
   
   document.getElementById("competencia").value = localStorage.getItem(`competencia_${chave}`) || "";
-  document.getElementById("data-entrega").value = localStorage.getItem(`dataEntrega_${chave}`) || "";
+  //document.getElementById("data-entrega").value = localStorage.getItem(`dataEntrega_${chave}`) || "";
   
   const container = document.getElementById("container");
   container.innerHTML = "";
@@ -183,7 +183,7 @@ document.getElementById("add-btn").addEventListener("click", () => {
 // AQUI ESTÁ O TRUQUE: Ao invés de só salvar, ele chama a função que atualiza tudo
 document.getElementById("competencia").addEventListener("input", atualizarCompetenciaEmMassa);
 
-document.getElementById("data-entrega").addEventListener("input", salvarDados);
+//document.getElementById("data-entrega").addEventListener("input", salvarDados);
 document.getElementById("exportar-pdf-btn").addEventListener("click", exportarPDF);
 document.getElementById("limpar-btn").addEventListener("click", limparDados);
 document.getElementById("tipo-protocolo").addEventListener("change", carregarDados);
